@@ -1,0 +1,213 @@
+/* Reset de estilo e configuração geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+}
+
+/* html {
+  height: 500vh;
+} */
+
+/* Container principal */
+.interface {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilo do cabeçalho */
+header {
+  width: 100%;
+  padding: 40px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  z-index: 1000;
+}
+
+header.rolagem {
+  background-color: white;
+  padding: 20px 0;
+  z-index: 1000;
+}
+
+header.rolagem .menu-desktop nav ul li a {
+  color: #333;
+}
+
+header.rolagem .btn-portal button {
+  background-color: #333;
+  color: white;
+}
+
+header .interface {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo img {
+  width: 180px;
+}
+
+header .menu-desktop nav ul {
+  list-style-type: none;
+}
+
+header .menu-desktop nav ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+header .menu-desktop nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.menu-desktop nav a:hover {
+  transform: scale(1.05);
+}
+
+header .btn-portal button {
+  width: 200px;
+  right: 80px;
+  font-size: 18px;
+  /* background-color: transparent; */
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: 0.5s;
+}
+
+header .btn-portal button:hover {
+  background-color: white;
+  color: #333;
+}
+
+main {
+  padding: 80px 0;
+}
+
+/* body {
+  background-color: black;
+} */
+
+/* Estilos para os blocos de cursos */
+.courses-section {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.courses-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.course-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  padding: 20px;
+  text-align: center;
+}
+
+.course-card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.course-card h3 {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.course-card p {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #666;
+}
+
+.btn-saiba-mais {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #0066cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn-saiba-mais:hover {
+  background-color: #004c99;
+}
+
+/* Botão WhatsApp */
+.btn-whatsapp {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25d366;
+  border-radius: 50%;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  z-index: 1000; /* Garantir que o botão fique por cima de outros elementos */
+}
+
+.btn-whatsapp img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Estilos para o rodapé */
+footer {
+  background-color: #333;
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 40px 0;
+}
+
+footer .top-footer button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: 0.5s;
+}
+
+footer .top-footer button:hover {
+  background-color: white;
+  color: #333;
+}
+
+footer .meio-footer {
+  margin: 20px 0;
+}
+
+footer .meio-footer a {
+  color: white;
+  margin: 0 10px;
+}
+
+footer .footer-direitos {
+  color: white;
+  margin-top: 10px;
+}

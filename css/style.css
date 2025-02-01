@@ -1,426 +1,490 @@
+/* Reset de estilo e configuração geral */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
 }
+
+html {
+  height: 500vh;
+}
+
+/* Container principal */
+.interface {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilo do cabeçalho */
 header {
+  width: 100%;
+  padding: 40px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  z-index: 1000;
+}
+
+header.rolagem {
+  background-color: white;
+  padding: 20px 0;
+  z-index: 1000;
+}
+
+header.rolagem .menu-desktop nav ul li a {
+  color: #333;
+}
+
+header.rolagem .btn-portal button {
+  background-color: #333;
+  color: white;
+}
+
+header .interface {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  border-radius: 5px;
-  background-color: #fff; /* Cor de fundo do cabeçalho */
 }
 
-.logo img {
-  max-width: 150px; /* Ajuste o tamanho máximo da imagem conforme necessário */
+header .logo img {
+  width: 180px;
 }
 
-.menu {
-  list-style: none;
-  display: flex;
-  gap: 20px; /* Espaçamento entre os itens do menu */
+header .menu-desktop nav ul {
+  list-style-type: none;
 }
 
-.menu a {
+header .menu-desktop nav ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+header .menu-desktop nav ul li a {
   text-decoration: none;
-  color: white; /* Cor do texto dos links */
-  padding: 10px;
-  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+  display: inline-block;
+  transition: 0.3s;
 }
 
-.botao-portal {
-  background-color: #007bff; /* Cor de fundo do botão */
-  color: #fff;
+.menu-desktop nav a:hover {
+  transform: scale(1.05);
+}
+
+header .btn-portal button {
+  width: 200px;
+  right: 80px;
+  font-size: 18px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
   padding: 10px 20px;
-  border-radius: 5px;
+  transition: 0.5s;
 }
 
-@media (max-width: 768px) {
-  .menu {
-    flex-direction: column;
-  }
-}
-
-body {
-  font-family: Arboria, sans-serif;
-  color: #000;
-  background-color: #fff;
-}
-
-header {
-  background-color: #00663a;
-  color: #fff;
-  padding: 20px;
-}
-
-
-/* Estilos para a seção de Facilidades do EAD */
-.facilidades-ead {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 2rem;
-  background-color: #f9f9f9;
-}
-
-.facilidades-conteudo {
-  flex: 1;
-  padding: 1rem;
-}
-
-.facilidades-conteudo h2 {
-  font-size: 2rem;
+header .btn-portal button:hover {
+  background-color: white;
   color: #333;
 }
 
-.facilidades-conteudo p {
-  font-size: 1.1rem;
-  margin: 1rem 0;
-  color: #555;
+/* Seção Banner Site */
+section.banner-site {
+  height: 100vh;
+  background-image: url(../img/polo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: whitesmoke;
 }
 
-.facilidades-conteudo ul {
-  list-style: none;
-  padding: 0;
-}
-
-.facilidades-conteudo ul li {
-  font-size: 1rem;
-  margin: 0.5rem 0;
-  color: #333;
+.banner-site .interface {
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
-.facilidades-conteudo ul li::before {
-  content: "✔️";
-  margin-right: 0.5rem;
-  color: #00663a;
+.banner-site .banner-texto h1 {
+  font-size: 4em;
+  line-height: 90px;
+  font-weight: 200;
 }
 
-.btn-cta {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #007bff;
+.banner-site .banner-texto h1 span {
+  display: block;
+  font-weight: 700;
+}
+
+.banner-site .banner-texto p {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.banner-site button {
+  width: 200px;
+  height: 60px;
+  font-size: 18px;
+  background-color: transparent;
+  border: 1px solid white;
   color: white;
-  text-decoration: none;
-  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: 0.5s;
 }
 
-.btn-cta:hover {
-  background-color: #0056b3;
-}
-
-.facilidades-imagem {
-  flex: 1;
-  text-align: center;
-}
-
-.facilidades-imagem img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Estilos para a seção de Cursos em Destaque */
-
-.ofertas-cursos {
-  background-color: #f3f3f3;
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-.ofertas-cursos h2 {
-  font-size: 2rem;
-  color: #333;
-}
-
-.ofertas-cursos p {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 2rem;
-}
-
-.cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.card {
+.banner-site button:hover {
   background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-  text-align: left;
-  width: 280px;
-}
-
-.card h3 {
-  font-size: 1.5rem;
-  color: #00663a;
-  margin-bottom: 1rem;
-}
-
-.card ul {
-  list-style: none;
-  padding: 0;
-}
-
-.card ul li {
-  font-size: 1rem;
-  color: #333;
-  margin-bottom: 0.5rem;
-}
-
-.btn-cta {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #00663a;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.btn-cta:hover {
-  background-color: #00663a;
-}
-
-/* Estilos para a seção de Vantagens do EAD */
-
-.vantagens-ead {
-  background-color: #f9f9f9;
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-.vantagens-ead h2 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 1rem;
-}
-
-.vantagens-ead p {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 2rem;
-}
-
-.vantagens-lista {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-.vantagem-item {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  text-align: left;
-  width: 300px;
-}
-
-.vantagem-item h3 {
-  font-size: 1.3rem;
-  color: #00663a;
-  margin-bottom: 0.5rem;
-}
-
-.vantagem-item p {
-  font-size: 1rem;
   color: #333;
 }
 
-/* Estilos para a seção de Formas de Ingresso */
-
-.formas-ingresso {
-  background-color: #ffffff;
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-.formas-ingresso h2 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 1rem;
-}
-
-.formas-ingresso p {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 2rem;
-}
-
-.cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-.card {
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-  text-align: left;
-  width: 280px;
-}
-
-.card h3 {
-  font-size: 1.4rem;
-  color: #00663a;
-  margin-bottom: 0.5rem;
-}
-
-.card p {
-  font-size: 1rem;
-  color: #333;
-}
-
-/* Estilos para a seção de Perguntas Frequentes */
-
-.faq {
-  background-color: white;
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-.faq h2 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 1rem;
-}
-
-.faq-item {
-  margin-bottom: 1rem;
+/* Seção Facilidades EAD */
+section.facilidades-ead {
+  padding: 100px 0;
+  background-image: url(../img/hand-painted-watercolor-background-with-sky-clouds-shape.jpg);
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.faq-question {
-  background-color: #00663a;
-  color: white;
-  border: none;
-  padding: 1rem;
-  width: 50%;
-  font-size: 1.1rem;
-  text-align: left;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: background-color 0.3s;
-  margin: 0 auto;
-}
-
-.faq-question:hover {
-  background-color: aquamarine;
-}
-
-.faq-answer {
-  display: none;
-  background-color: white;
-  padding: 1rem;
-  border-radius: 8px;
-  margin-top: 1rem;
+.facilidades-conteudo {
   text-align: center;
-  width: 50%;
-  margin: 0 auto;
+  margin-bottom: 40px;
 }
 
-.faq-answer p {
-  font-size: 1rem;
-  color: #555;
-}
-
-/* Estilos do Rodapé */
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  background-color: #333;
-  color: white;
-  padding: 20px;
-}
-
-footer h4 {
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-}
-
-footer p,
-footer a {
-  font-size: 1rem;
-  color: white;
-}
-
-footer a {
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Estilos para os Contatos */
-.footer-contato,
-.footer-links,
-.footer-redes,
-.footer-mec,
-.footer-direitos {
-  flex: 1;
-  margin-right: 20px;
+.facilidades-conteudo h2 {
+  font-size: 3em;
   margin-bottom: 20px;
 }
 
-/* Ajuste nos Links */
-.footer-links ul {
+.facilidades-conteudo p {
+  font-size: 1.2em;
+  color: whitesmoke;
+}
+
+.itens-conteiner {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.txt-itens {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+.txt-itens h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.txt-itens p {
+  font-size: 1em;
+  color: #555;
+}
+
+/* Seção Ofertas de Cursos */
+section.ofertas-cursos {
+  padding: 100px 0;
+  background-image: url(../img/abstract-green-smooth-wave-lines.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.oferta-ead {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.oferta-ead h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.oferta-ead p {
+  font-size: 1.2em;
+  color: white;
+}
+
+.cursos-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+/* Estilos para os cartões */
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  border: 2px solid #333;
+}
+
+.card h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.card ul {
   list-style-type: none;
   padding: 0;
 }
 
-.footer-links li {
-  margin-bottom: 5px;
+.card ul li {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #555;
 }
 
-.footer-redes a,
-.footer-mec a {
+/* Estilos para os botões */
+.btn-curso {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #555;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-curso:hover {
+  background-color: #333;
+}
+
+/* Seção Formas de Ingresso */
+section.formas-ingresso {
+  padding: 80px 0;
+  background-image: url(../img/paper-mockup-design-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.txt-ingresso,
+.cards-ingresso {
+  display: inline-block;
+  width: 50%;
+  margin-right: -4px;
+  vertical-align: top;
+}
+
+.formas-ingresso .txt-ingresso {
+  position: sticky;
+  top: 50%;
+  padding: 40px;
+  z-index: 500;
+}
+
+.formas-ingresso .txt-ingresso h3 {
+  font-size: 4em;
+  line-height: 60px;
+  font-weight: 300;
+}
+
+.formas-ingresso .txt-ingresso h3 span {
   display: block;
-  margin-bottom: 10px;
+  font-weight: 700;
 }
 
-/* Ajuste de Responsividade para telas menores */
-@media (max-width: 768px) {
-  footer {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-contato,
-  .footer-links,
-  .footer-redes,
-  .footer-mec,
-  .footer-direitos {
-    flex: unset;
-    margin-right: 0;
-  }
-
-  .footer-direitos {
-    text-align: center;
-    margin-top: 20px;
-  }
+.cards-ingresso .cards-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+  border: 2px solid #333;
+  padding: 20px;
 }
 
-/* Estilo para o botão fixo do WhatsApp */
-.whatsapp-btn {
+.cards-ingresso .cards-box img {
+  max-width: 100px;
+}
+
+.cards-ingresso .cards-box h4 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.cards-ingresso .cards-box p {
+  font-size: 1em;
+  line-height: 20px;
+  font-weight: 300;
+}
+
+.cards-ingresso .cards-box p span {
+  font-weight: 700;
+}
+
+/* Seção Contato */
+section.contato {
+  padding: 80px 0;
+  background-image: url(../img/Captura\ de\ tela\ 2025-01-31\ 224033.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.txt-contato,
+.icons-contato {
+  display: inline-block;
+  width: 50%;
+  margin-right: -4px;
+  vertical-align: middle;
+}
+
+.contato .txt-contato h3 {
+  font-size: 2.5em;
+  line-height: 40px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.contato .txt-contato h3 span {
+  display: block;
+  font-weight: 800;
+}
+
+.contato .txt-contato p {
+  font-size: 1.2em;
+  color: #555;
+  padding: 20px 0;
+}
+
+.contato .icons-contato a {
+  text-decoration: none;
+}
+
+.contato .icons-contato button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #333;
+  width: 60%;
+  height: 60px;
+  margin: 0 auto 20px auto;
+  padding: 0 60px;
+  background-color: transparent;
+  border: 2px solid #333;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.contato .icons-contato button p {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.contato .icons-contato button i {
+  font-size: 20px;
+}
+
+.contato .icons-contato button:hover {
+  background-color: #333;
+}
+
+.contato .icons-contato button:hover i,
+.contato .icons-contato button:hover p {
+  color: white;
+}
+
+/* Estilo geral da seção FAQ */
+.faq {
+  background-image: url(../img/empty-elegant-background-with-copy-space.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 80px 0;
+}
+
+.interface {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.faq-container h2 {
+  text-align: center;
+  font-size: 3em;
+  color: black;
+  margin-bottom: 40px;
+}
+
+/* Estilo dos itens do FAQ */
+.faq-item {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo dos botões de pergunta */
+.faq-question {
+  width: 100%;
+  padding: 20px 25px;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  background-color: #f1f1f1;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: #e0e0e0;
+}
+
+.faq-question.active {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Estilo das respostas */
+.faq-answer {
+  display: none;
+  padding: 20px 25px;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.faq-answer p {
+  margin: 0;
+}
+
+/* Exibir resposta quando a pergunta está ativa */
+.faq-question.active + .faq-answer {
+  display: block;
+}
+
+/* Botão WhatsApp */
+.btn-whatsapp {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 30px;
+  right: 30px;
   background-color: #25d366;
   border-radius: 50%;
   padding: 15px;
@@ -429,182 +493,60 @@ footer a:hover {
   z-index: 1000; /* Garantir que o botão fique por cima de outros elementos */
 }
 
-.whatsapp-btn img {
+.btn-whatsapp img {
   width: 40px;
   height: 40px;
 }
 
-.whatsapp-btn:hover {
-  background-color: #128c7e;
-}
-
-/* Estilos para os blocos de cursos */
-.courses-section {
-  margin: 40px 0;
+/* Estilos para o rodapé */
+footer {
+  background-color: #333;
+  width: 100%;
   text-align: center;
+  color: white;
+  padding: 40px 0;
 }
 
-.courses-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.course-card {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 280px;
-  padding: 20px;
-  text-align: center;
-}
-
-.course-card img {
-  max-width: 100%;
-  border-radius: 8px;
-}
-
-.course-card h3 {
+footer .top-footer button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
   font-size: 20px;
-  margin: 10px 0;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: 0.5s;
+}
+
+footer .top-footer button:hover {
+  background-color: white;
   color: #333;
 }
 
-.course-card p {
-  font-size: 16px;
-  margin: 5px 0;
-  color: #666;
-}
-
-.btn-saiba-mais {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #0066cc;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.btn-saiba-mais:hover {
-  background-color: #004c99;
-}
-
-/* Seção de Informações de Contato */
-#informacoes-contato {
-  background-color: #ffffff;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 8px;
-}
-
-#informacoes-contato h2 {
-  font-size: 1.8em;
-  margin-bottom: 20px;
-}
-
-#informacoes-contato p,
-#informacoes-contato ul {
-  font-size: 1.1em;
-}
-
-#informacoes-contato ul {
-  list-style-type: none;
-  margin-left: 0;
-}
-
-#informacoes-contato li {
-  margin-bottom: 8px;
-}
-
-/* Seção de Localização */
-#localizacao {
-  text-align: center;
+footer .meio-footer {
   margin: 20px 0;
 }
 
-#localizacao iframe {
-  max-width: 100%;
-  height: 450px;
-  border: none;
-}
-
-/* Formulário de Contato */
-#formulario-contato {
-  background-color: #ffffff;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 8px;
-}
-
-#formulario-contato h2 {
-  font-size: 1.8em;
-  margin-bottom: 20px;
-}
-
-#formulario-contato label {
-  font-size: 1.1em;
-  margin-bottom: 5px;
-  display: block;
-}
-
-#formulario-contato input,
-#formulario-contato textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1em;
-}
-
-#formulario-contato textarea {
-  height: 150px;
-}
-
-#formulario-contato button {
-  background-color: #004aad;
+footer .meio-footer a {
   color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  margin: 0 10px;
 }
 
-#formulario-contato button:hover {
-  background-color: #003b8a;
+footer .footer-direitos {
+  color: white;
+  margin-top: 10px;
 }
 
-/* Seção de Redes Sociais */
-#redes-sociais {
-  text-align: center;
-  margin: 40px 0;
-}
+/* Responsividade */
+@media (max-width: 768px) {
+  .cursos-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-#redes-sociais h2 {
-  font-size: 1.8em;
-  margin-bottom: 20px;
-}
-
-#redes-sociais ul {
-  list-style-type: none;
-}
-
-#redes-sociais li {
-  display: inline;
-  margin: 0 15px;
-}
-
-#redes-sociais a {
-  text-decoration: none;
-  font-size: 1.2em;
-  color: #004aad;
-  transition: color 0.3s ease;
-}
-
-#redes-sociais a:hover {
-  color: #003b8a;
+  .card {
+    width: 80%;
+  }
 }

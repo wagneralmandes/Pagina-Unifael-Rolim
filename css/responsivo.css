@@ -1,0 +1,91 @@
+@media screen and (max-width: 1000px) {
+}
+
+@media screen and (max-width: 768px) {
+  header .menu-desktop,
+  header .btn-portal {
+    display: none;
+  }
+
+  .banner-site .banner-texto h1 {
+    font-size: 3em;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  .banner-site .banner-texto p {
+    font-size: 20px;
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  .banner-site button {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .card h3 {
+    font-size: 30px;
+  }
+
+  .formas-ingresso .txt-ingresso h3 {
+    font-size: 3.5em;
+    line-height: 60px;
+  }
+
+  .contato .icons-contato button {
+    width: 80%;
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  /* Seção Formas de Ingresso */
+  .txt-ingresso,
+  .cards-ingresso {
+    display: block;
+    width: 100%;
+  }
+
+  .formas-ingresso .txt-ingresso {
+    position: static;
+  }
+
+  .formas-ingresso .txt-ingresso h3 {
+    font-size: 3em;
+    line-height: 50px;
+  }
+
+  .cards-ingresso .cards-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Seção Contato */
+  .txt-contato,
+  .icons-contato {
+    display: block;
+    width: 100%;
+  }
+
+  .contato .txt-contato h3 {
+    font-size: 2em;
+    line-height: 40px;
+  }
+
+  .contato .icons-contato button {
+    width: 100%;
+    border: 2px solid black;
+  }
+
+  .contato .icons-contato button p {
+    font-size: 1.5em;
+    color: black;
+  }
+
+  .contato .icons-contato button i {
+    font-size: 20px;
+    color: black;
+  }
+}

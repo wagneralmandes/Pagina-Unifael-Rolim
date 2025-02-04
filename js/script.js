@@ -3,12 +3,27 @@ window.addEventListener("scroll", function () {
   header.classList.toggle("rolagem", window.scrollY > 250);
 });
 
-// document.querySelectorAll(".faq-question").forEach((button) => {
-//   button.addEventListener("click", () => {
-//     const answer = button.nextElementSibling;
-//     answer.style.display = answer.style.display === "block" ? "none" : "block";
-//   });
-// });
+function headerShow() {
+  let header = document.querySelector("header");
+
+  if (header.classList.contains("open")) {
+    header.classList.remove("open");
+  } else {
+    header.classList.add("open");
+  }
+}
+
+function menuShow() {
+  let ul = document.querySelector(".menu-nav ul");
+
+  if (ul.classList.contains("open")) {
+    ul.classList.remove("open");
+    document.querySelector(".menu-icon img").src = "img/menu.png";
+  } else {
+    ul.classList.add("open");
+    document.querySelector(".menu-icon img").src = "img/close.png";
+  }
+}
 
 // Adicionando funcionalidade de acordeão
 document.querySelectorAll(".faq-question").forEach((button) => {

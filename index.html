@@ -22,34 +22,31 @@
 </head>
 
 <body>
-  <header>
+  <header class="" onclick="headerShow()">
     <!-- Interface do Site -->
     <div class="interface">
-      <!-- Logo da Instituição -->
-      <section class="logo">
-        <img src="img/unifael logo.png" alt="Logo UNIFAEL Rolim de Moura" />
-      </section>
-
-      <!-- Seção de Menu do Site -->
-      <section class="menu-desktop">
-        <nav>
-          <ul>
-            <!-- <li><a href="../index.html">Home</a></li> -->
-            <li><a href="https://vestibular.fael.edu.br/" target="_blank">Graduação</a></li>
-            <li><a href="https://posead.fael.edu.br/nossos-cursos" target="_blank">Pós-Graduação</a></li>
-            <li><a href="#">Sobre Nós</a></li>
-            <!-- <li><a href="#">Eventos</a></li> -->
-            <li><a href="#">Contato</a></li>
-          </ul>
-        </nav>
-      </section>
-
-      <!-- Secção Botão Portal do Aluno -->
-      <section class="btn-portal">
-        <a href="https://aluno.unifael.edu.br/" target="_blank">
-          <button>Portal do Aluno</button>
-        </a>
-      </section>
+      <nav class="menu-nav">
+        <!-- Logo da Instituição -->
+        <div class="logo">
+          <img src="img/unifael logo.png" alt="Logo UNIFAEL Rolim de Moura" />
+        </div>
+      </nav>
+      <nav class="menu-nav">
+        <ul>
+          <!-- <li><a href="../index.html">Home</a></li> -->
+          <li><a href="https://vestibular.fael.edu.br/" target="_blank">Graduação</a></li>
+          <li><a href="https://posead.fael.edu.br/nossos-cursos" target="_blank">Pós-Graduação</a></li>
+          <li><a href="#">Sobre Nós</a></li>
+          <li><a href="#">Eventos</a></li>
+          <li><a href="#">Contato</a></li>
+          <li><a href="https://aluno.unifael.edu.br/" target="_blank"><button class="btn-portal">Portal do Aluno</button></a></li>
+        </ul>
+      </nav>
+      <nav class="menu-nav">
+        <div class="menu-icon" onclick="menuShow()">
+          <img src="img/menu.png" alt="">
+        </div>
+      </nav>
     </div>
   </header>
   <main>

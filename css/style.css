@@ -12,7 +12,7 @@ html {
 
 /* Container principal */
 .interface {
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 10%;
 }
@@ -28,19 +28,24 @@ header {
   z-index: 1000;
 }
 
+header.open {
+  background-color: #333;
+}
+
 header.rolagem {
-  background-color: white;
+  background-color: #333;
   padding: 20px 0;
   z-index: 1000;
 }
 
-header.rolagem .menu-desktop nav ul li a {
-  color: #333;
+header.rolagem .menu-nav ul li a {
+  color: white;
 }
 
-header.rolagem .btn-portal button {
+header.rolagem button.btn-portal {
   background-color: #333;
   color: white;
+  border: 1px solid #333;
 }
 
 header .interface {
@@ -53,16 +58,18 @@ header .logo img {
   width: 180px;
 }
 
-header .menu-desktop nav ul {
+header .menu-nav ul {
+  display: flex;
+  align-items: center;
   list-style-type: none;
 }
 
-header .menu-desktop nav ul li {
+header .menu-nav ul li {
   display: inline-block;
   margin: 0 20px;
 }
 
-header .menu-desktop nav ul li a {
+header .menu-nav ul li a {
   text-decoration: none;
   color: white;
   font-size: 18px;
@@ -70,11 +77,11 @@ header .menu-desktop nav ul li a {
   transition: 0.3s;
 }
 
-.menu-desktop nav a:hover {
+header .menu-nav a:hover {
   transform: scale(1.05);
 }
 
-header .btn-portal button {
+header button.btn-portal {
   width: 200px;
   right: 80px;
   font-size: 18px;
@@ -86,19 +93,33 @@ header .btn-portal button {
   transition: 0.5s;
 }
 
-header .btn-portal button:hover {
+header button.btn-portal:hover {
   background-color: white;
   color: #333;
 }
 
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-icon img {
+  width: 50px;
+}
+
+@media (max-width: 768px) {
+  
+}
+
+
 /* Seção Banner Site */
 section.banner-site {
   height: 100vh;
-  background-image: url(../img/polo.png);
+  background-image: url(../img/polo-baner.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  color: whitesmoke;
+  color: white;
 }
 
 .banner-site .interface {
@@ -110,7 +131,7 @@ section.banner-site {
 .banner-site .banner-texto h1 {
   font-size: 4em;
   line-height: 90px;
-  font-weight: 200;
+  font-weight: 400;
 }
 
 .banner-site .banner-texto h1 span {
@@ -119,14 +140,14 @@ section.banner-site {
 }
 
 .banner-site .banner-texto p {
-  font-size: 20px;
+  font-size: 30px;
   margin: 20px 0;
 }
 
 .banner-site button {
   width: 200px;
   height: 60px;
-  font-size: 18px;
+  font-size: 22px;
   background-color: transparent;
   border: 1px solid white;
   color: white;
@@ -136,14 +157,14 @@ section.banner-site {
 }
 
 .banner-site button:hover {
-  background-color: white;
-  color: #333;
+  background-color: #333;
+  color: white;
 }
 
 /* Seção Facilidades EAD */
 section.facilidades-ead {
   padding: 100px 0;
-  background-image: url(../img/hand-painted-watercolor-background-with-sky-clouds-shape.jpg);
+  background-image: url(../img/tema-facilidades.jpg);
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -194,7 +215,7 @@ section.facilidades-ead {
 /* Seção Ofertas de Cursos */
 section.ofertas-cursos {
   padding: 100px 0;
-  background-image: url(../img/abstract-green-smooth-wave-lines.jpg);
+  background-image: url(../img/tema-oferta.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -272,7 +293,7 @@ section.ofertas-cursos {
 /* Seção Formas de Ingresso */
 section.formas-ingresso {
   padding: 80px 0;
-  background-image: url(../img/paper-mockup-design-background.jpg);
+  background-image: url(../img/tema-ingresso.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -335,7 +356,7 @@ section.formas-ingresso {
 /* Seção Contato */
 section.contato {
   padding: 80px 0;
-  background-image: url(../img/Captura\ de\ tela\ 2025-01-31\ 224033.png);
+  background-image: url(../img/tema-contato.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -405,7 +426,7 @@ section.contato {
 
 /* Estilo geral da seção FAQ */
 .faq {
-  background-image: url(../img/empty-elegant-background-with-copy-space.jpg);
+  background-image: url(../img/tema-faq.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 80px 0;
